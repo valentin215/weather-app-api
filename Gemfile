@@ -25,6 +25,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Pundit for authorization security
 gem 'pundit'
 
+# API calls
+gem 'httparty'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
