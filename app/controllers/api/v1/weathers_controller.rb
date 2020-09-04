@@ -5,8 +5,10 @@ class Api::V1::WeathersController < Api::V1::BaseController
   def index
     location = params[:location]
 
-    @weathers = HTTParty.get("https://api.openweathermap.org/data/2.5/weather?q=#{location}&appid=#{ENV['WEATHER_API_KEY']}")
+    pp current_user
 
+    @weathers = HTTParty.get("https://api.openweathermap.org/data/2.5/weather?q=#{location}&appid=#{ENV['WEATHER_API_KEY']}")
+    
 
     render json: @weathers, status: :ok
   end
